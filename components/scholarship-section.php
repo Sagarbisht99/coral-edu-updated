@@ -126,8 +126,8 @@
             </p>
 
             <div class="scholarship-btns">
-                <a href="#" class="btn-navy">Check Scholarship Support</a>
-                <a href="#" class="btn-white">Book Free Counselling</a>
+                <a href="#" onclick="openGlobalPopup(); return false;" class="btn-navy">Check Scholarship Support</a>
+                <a href="#" onclick="openGlobalPopup(); return false;" class="btn-white">Book Free Counselling</a>
             </div>
         </div>
 

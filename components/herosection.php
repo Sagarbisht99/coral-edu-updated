@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded', startCountdown);
         z-index: 1000;
         padding: 15px 0;
         transition: all 0.3s ease;
+        font-family: 'Inter', -apple-system, sans-serif;
     }
 
     .header-container {

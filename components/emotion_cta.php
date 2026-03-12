@@ -14,7 +14,7 @@
             </p>
             
             <div class="cr-cta-action">
-                <a href="#" class="cr-cta-btn">
+                <a href="#" class="cr-cta-btn" onclick="openGlobalPopup(); return false;">
                     Book Free Counselling
                     <i class="fas fa-arrow-right"></i>
                 </a>
