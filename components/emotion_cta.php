@@ -8,7 +8,7 @@
     <div class="emotion-cta-container">
         <div class="emotion-cta-content">
             <div class="emotion-cta-image-wrapper">
-                <img src="/assets/images/remove-bg.png" alt="Student seeking college admission guidance" class="emotion-cta-image">
+                <img src="https://i.pinimg.com/736x/a7/8f/47/a78f47af6401bec8b80b315f6cd5412b.jpg" alt="Student seeking college admission guidance" class="emotion-cta-image">
                 <div class="emotion-cta-image-overlay"></div>
             </div>
             <div class="emotion-cta-text-content">

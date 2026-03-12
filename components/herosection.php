@@ -70,7 +70,7 @@
         position: relative;
         min-height: 100vh;
         background: linear-gradient(to right, rgba(10, 35, 91, 0.8) 0%, rgba(10, 35, 91, 0.2) 50%, rgba(10, 35, 91, 0.1) 100%), 
-                    var(--bg-dark) url("/assets/images/hero.jpg") center/cover no-repeat;
+                    var(--bg-dark) url("https://i.pinimg.com/1200x/57/ae/14/57ae1480cf6d9a5750bd0107c65befca.jpg") center/cover no-repeat;
         display: flex;
         align-items: center;
         padding: 120px 0 60px 0;
