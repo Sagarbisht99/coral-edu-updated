@@ -120,11 +120,121 @@ $stats = [
 
     /* Responsive for Tablets & Phones */
     @media (max-width: 992px) {
-        .placement-grid { grid-template-columns: repeat(2, 1fr); }
+        .placement-grid { 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 25px;
+        }
+        
+        .placement-section {
+            padding: 60px 20px;
+        }
+        
+        .placement-title {
+            font-size: 32px;
+        }
+        
+        .stat-card {
+            padding: 35px 20px;
+        }
     }
+
+    @media (max-width: 768px) {
+        .placement-section {
+            padding: 50px 20px;
+        }
+        
+        .placement-title {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+        
+        .placement-subtitle {
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            padding: 30px 20px;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+        }
+        
+        .stat-desc {
+            font-size: 13px;
+        }
+    }
+
     @media (max-width: 576px) {
-        .placement-grid { grid-template-columns: 1fr; }
-        .placement-title { font-size: 28px; }
+        .placement-grid { 
+            grid-template-columns: 1fr; 
+            gap: 20px;
+        }
+        
+        .placement-section {
+            padding: 40px 15px;
+        }
+        
+        .placement-title { 
+            font-size: 24px; 
+        }
+        
+        .placement-subtitle {
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        
+        .stat-card {
+            padding: 25px 15px;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .stat-desc {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .placement-section {
+            padding: 35px 15px;
+        }
+        
+        .placement-title { 
+            font-size: 22px; 
+        }
+        
+        .placement-subtitle {
+            font-size: 13px;
+        }
+        
+        .stat-card {
+            padding: 20px 15px;
+        }
+        
+        .stat-value {
+            font-size: 26px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+        }
+        
+        .stat-desc {
+            font-size: 11px;
+        }
     }
 </style>
 

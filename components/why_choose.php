@@ -1,179 +1,189 @@
 <style>
-    .features-section {
-        padding: 60px 20px;
-        background-color: #f8f9fa;
+    /* Why Study Section Styles - Updated Theme */
+    .why-study-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #001a35 0%, #00254a 100%);
         font-family: 'Inter', sans-serif;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
 
-    .features-container {
-        max-width: 1140px;
+    /* Glow Effect */
+    .why-glow-top {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(255, 122, 0, 0.15) 0%, transparent 70%);
+        filter: blur(80px);
+        pointer-events: none;
+    }
+
+    .why-glow-bottom {
+        position: absolute;
+        bottom: -10%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+        filter: blur(80px);
+        pointer-events: none;
+    }
+
+    .section-title {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 60px;
+        color: #ffffff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .highlight-text {
+        background: linear-gradient(135deg, #ff7a00 0%, #f59e0b 100%);
+        color: #ffffff;
+        padding: 6px 20px;
+        border-radius: 50px;
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    .benefits-grid {
+        max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        position: relative;
+        z-index: 1;
     }
 
-    /* Common Card Styling */
-    .feature-card {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #eee;
+    .benefit-item {
         display: flex;
         flex-direction: column;
-    }
-
-    .feature-img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .feature-content {
-        padding: 32px;
-    }
-
-    /* Main Left Card Specifics */
-    .main-card .feature-img {
-        height: 300px;
-    }
-
-    .feature-badge {
-        background-color: #ffd85d;
-        color: #000;
-        font-size: 11px;
-        font-weight: 700;
-        padding: 4px 12px;
+        align-items: center;
+        text-align: center;
+        padding: 35px 25px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 20px;
-        display: inline-block;
-        margin-bottom: 16px;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
     }
 
-    .feature-title {
-        font-size: 22px;
-        font-weight: 800;
-        line-height: 1.3;
-        margin-bottom: 16px;
-        color: #111;
+    .benefit-item:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 122, 0, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .feature-text {
-        color: #777;
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 24px;
-    }
-
-    /* Bullet List */
-    .feature-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .list-item {
-        margin-bottom: 20px;
-        padding-left: 24px;
-        position: relative;
-    }
-
-    .list-item::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 6px;
-        width: 8px;
-        height: 8px;
-        background-color: #ff7a00;
+    /* Icon Container with Orange Theme */
+    .icon-box {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(255, 122, 0, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
         border-radius: 50%;
+        border: 2px solid rgba(255, 122, 0, 0.3);
     }
 
-    .list-item-title {
-        display: block;
-        font-weight: 700;
-        font-size: 14px;
-        color: #333;
-        margin-bottom: 4px;
+    .icon-box img {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
     }
 
-    .list-item-desc {
-        font-size: 13px;
-        color: #888;
-    }
-
-    /* Right Side Stack */
-    .feature-stack {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 24px;
-    }
-
-    .small-card .feature-img {
-        height: 180px;
-    }
-
-    .small-card .feature-content {
-        padding: 24px;
-    }
-
-    .small-card .feature-title {
+    .benefit-title {
         font-size: 18px;
-        margin-bottom: 12px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #ffffff;
+        margin: 0;
+        max-width: 280px;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-        .features-container { grid-template-columns: 1fr; }
+    /* Responsive for Mobile */
+    @media (max-width: 992px) {
+        .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        .section-title { font-size: 32px; margin-bottom: 40px; }
+        .why-study-section { padding: 60px 20px; }
+    }
+    
+    @media (max-width: 768px) {
+        .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+        .section-title { font-size: 28px; margin-bottom: 35px; }
+        .why-study-section { padding: 50px 20px; }
+        .benefit-item { padding: 30px 20px; }
+    }
+    
+    @media (max-width: 576px) {
+        .section-title { font-size: 24px; margin-bottom: 30px; }
+        .why-study-section { padding: 40px 15px; }
+        .benefit-item { padding: 25px 18px; }
+        .icon-box { width: 60px; height: 60px; }
+    }
+    
+    @media (max-width: 480px) {
+        .section-title { font-size: 22px; }
+        .why-study-section { padding: 35px 15px; }
+        .benefit-title { font-size: 16px; }
     }
 </style>
 
-<section class="features-section">
-    <div class="features-container">
-        
-        <!-- Left Main Card -->
-        <div class="feature-card main-card">
-            <img src="https://i.pinimg.com/736x/27/11/0f/27110fc00990e3f056884ec72123b701.jpg" alt="Guidance" class="feature-img">
-            <div class="feature-content">
-                <div class="feature-badge">Why students choose Coral Education</div>
-                <h3 class="feature-title">Personalized guidance built around profile, budget, specialization, and placement goals</h3>
-                <p class="feature-text">Students and parents often need simple clarity. Our counsellors help compare colleges, shortlist realistic options, and reduce confusion across the full admission journey.</p>
-                
-                <ul class="feature-list">
-                    <?php 
-                    $list_items = [
-                        ['t' => 'Profile-based college shortlisting', 'd' => 'Match percentile, budget, city preference, and future career goals.'],
-                        ['t' => 'Better decisions with average scores', 'd' => 'Explore suitable colleges even if CAT or entrance performance is not ideal.'],
-                        ['t' => 'Transparent support', 'd' => 'Understand fees, ROI, scholarships, and next-step planning more clearly.']
-                    ];
-                    foreach($list_items as $item): ?>
-                        <li class="list-item">
-                            <span class="list-item-title"><?php echo $item['t']; ?></span>
-                            <span class="list-item-desc"><?php echo $item['d']; ?></span>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+<section class="why-study-section">
+    <div class="why-glow-top"></div>
+    <div class="why-glow-bottom"></div>
+    
+    <h2 class="section-title">Why study with <span class="highlight-text">Coral Education?</span></h2>
+    
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" alt="UGC Entitled">
             </div>
+            <h4 class="benefit-title">UGC & AICTE Entitled Programs</h4>
         </div>
 
-        <!-- Right Side Stack -->
-        <div class="feature-stack">
-            <div class="feature-card small-card">
-                <img src="https://i.pinimg.com/1200x/dd/88/98/dd889885af9b1863143576df78825eca.jpg" alt="Storytelling" class="feature-img">
-                <div class="feature-content">
-                    <h3 class="feature-title">Better visual storytelling</h3>
-                    <p class="feature-text">The redesigned homepage uses larger image blocks and cleaner section spacing to make every trust point easier to understand.</p>
-                </div>
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/2942/2942544.png" alt="Industry Partners">
             </div>
-
-            <div class="feature-card small-card">
-                <img src="https://i.pinimg.com/1200x/72/31/3a/72313a6d61e63bfaeefe757ef759f766.jpg" alt="Conversion" class="feature-img">
-                <div class="feature-content">
-                    <h3 class="feature-title">Simple, focused conversion flow</h3>
-                    <p class="feature-text">No popup distractions. The main page keeps attention on counselling, trust signals, and action-driven sections.</p>
-                </div>
-            </div>
+            <h4 class="benefit-title">Curriculum Insights by Industry Leaders</h4>
         </div>
 
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1946/1946115.png" alt="Faculty">
+            </div>
+            <h4 class="benefit-title">Experienced & Corporate Mentors</h4>
+        </div>
+
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/2845/2845812.png" alt="Fees">
+            </div>
+            <h4 class="benefit-title">Affordable Fee With No Cost EMI Options</h4>
+        </div>
+
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3210/3210158.png" alt="Live Sessions">
+            </div>
+            <h4 class="benefit-title">Regular Live Interactive Career Coaching</h4>
+        </div>
+
+        <div class="benefit-item">
+            <div class="icon-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="LMS">
+            </div>
+            <h4 class="benefit-title">Advanced Job Readiness Dashboard</h4>
+        </div>
     </div>
 </section>

@@ -216,5 +216,262 @@
         .cr-layout-grid { grid-template-columns: 1fr; }
         .cr-dual-cards { grid-template-columns: 1fr; }
         .cr-main-heading { font-size: 32px; }
+        .cr-container { padding: 0 20px; }
+        .cr-about-wrapper { padding: 60px 0; }
+    }
+
+    @media (max-width: 768px) {
+        .cr-about-wrapper {
+            padding: 50px 0;
+        }
+        
+        .cr-container {
+            padding: 0 20px;
+        }
+        
+        .cr-header-block {
+            margin-bottom: 40px;
+        }
+        
+        .cr-main-heading {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+        
+        .cr-sub-heading {
+            font-size: 15px;
+        }
+        
+        .cr-metrics-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .cr-metric-card {
+            padding: 25px 20px;
+        }
+        
+        .cr-num {
+            font-size: 24px;
+        }
+        
+        .cr-layout-grid {
+            gap: 30px;
+        }
+        
+        .cr-mid-title {
+            font-size: 24px;
+        }
+        
+        .cr-para-text {
+            font-size: 15px;
+        }
+        
+        .cr-tag {
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+        
+        .cr-small-card {
+            padding: 20px;
+        }
+        
+        .cr-small-card h4 {
+            font-size: 16px;
+        }
+        
+        .cr-small-card p {
+            font-size: 12px;
+        }
+        
+        .cr-network-panel,
+        .cr-expert-widget {
+            padding: 25px 20px;
+        }
+        
+        .cr-panel-title {
+            font-size: 18px;
+        }
+        
+        .cr-network-list li {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cr-about-wrapper {
+            padding: 40px 0;
+        }
+        
+        .cr-container {
+            padding: 0 15px;
+        }
+        
+        .cr-header-block {
+            margin-bottom: 30px;
+        }
+        
+        .cr-main-heading {
+            font-size: 24px;
+        }
+        
+        .cr-sub-heading {
+            font-size: 14px;
+        }
+        
+        .cr-metrics-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cr-metric-card {
+            padding: 20px 15px;
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+        
+        .cr-icon-box {
+            font-size: 28px;
+        }
+        
+        .cr-num {
+            font-size: 22px;
+        }
+        
+        .cr-lab {
+            font-size: 13px;
+        }
+        
+        .cr-layout-grid {
+            gap: 25px;
+        }
+        
+        .cr-mid-title {
+            font-size: 22px;
+        }
+        
+        .cr-para-text {
+            font-size: 14px;
+        }
+        
+        .cr-tag {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+        
+        .cr-tag-cloud {
+            gap: 8px;
+        }
+        
+        .cr-small-card {
+            padding: 18px 15px;
+        }
+        
+        .cr-small-card h4 {
+            font-size: 15px;
+        }
+        
+        .cr-small-card p {
+            font-size: 12px;
+        }
+        
+        .cr-network-panel,
+        .cr-expert-widget {
+            padding: 20px 15px;
+        }
+        
+        .cr-panel-title {
+            font-size: 16px;
+        }
+        
+        .cr-network-list li {
+            font-size: 12px;
+            padding: 10px 0;
+        }
+        
+        .cr-expert-img {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        
+        .cr-expert-meta h4 {
+            font-size: 16px;
+        }
+        
+        .cr-expert-meta span {
+            font-size: 12px;
+        }
+        
+        .cr-widget-p {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cr-about-wrapper {
+            padding: 35px 0;
+        }
+        
+        .cr-main-heading {
+            font-size: 22px;
+        }
+        
+        .cr-sub-heading {
+            font-size: 13px;
+        }
+        
+        .cr-metric-card {
+            padding: 18px 12px;
+        }
+        
+        .cr-num {
+            font-size: 20px;
+        }
+        
+        .cr-mid-title {
+            font-size: 20px;
+        }
+        
+        .cr-para-text {
+            font-size: 13px;
+        }
+        
+        .cr-tag {
+            font-size: 11px;
+            padding: 4px 8px;
+        }
+        
+        .cr-small-card {
+            padding: 15px 12px;
+        }
+        
+        .cr-small-card h4 {
+            font-size: 14px;
+        }
+        
+        .cr-small-card p {
+            font-size: 11px;
+        }
+        
+        .cr-network-panel,
+        .cr-expert-widget {
+            padding: 18px 12px;
+        }
+        
+        .cr-panel-title {
+            font-size: 15px;
+        }
+        
+        .cr-network-list li {
+            font-size: 11px;
+        }
+        
+        .cr-widget-p {
+            font-size: 12px;
+        }
     }
 </style>

@@ -70,6 +70,66 @@
             font-size: 26px;
         }
     }
+
+    @media (max-width: 768px) {
+        .cta-banner {
+            padding: 50px 20px;
+        }
+        
+        .cta-title {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        
+        .cta-subtitle {
+            font-size: 15px;
+        }
+        
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cta-banner {
+            padding: 40px 15px;
+        }
+        
+        .cta-title {
+            font-size: 22px;
+        }
+        
+        .cta-subtitle {
+            font-size: 14px;
+        }
+        
+        .cta-button {
+            padding: 12px 20px;
+            font-size: 14px;
+            width: 100%;
+            max-width: 280px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cta-banner {
+            padding: 35px 15px;
+        }
+        
+        .cta-title {
+            font-size: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 13px;
+        }
+        
+        .cta-button {
+            padding: 10px 18px;
+            font-size: 13px;
+        }
+    }
 </style>
 
 <section class="cta-banner">

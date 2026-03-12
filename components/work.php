@@ -262,6 +262,151 @@
     @media (max-width: 992px) {
         .cr-step-grid {
             grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .cr-step-poster {
+            height: 400px;
+        }
+        
+        .cr-step-main-title {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cr-step-section {
+            padding: 60px 0;
+        }
+        
+        .cr-step-container {
+            padding: 0 20px;
+        }
+        
+        .cr-step-header {
+            margin-bottom: 40px;
+        }
+        
+        .cr-step-main-title {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+        
+        .cr-step-desc {
+            font-size: 15px;
+        }
+        
+        .cr-step-poster {
+            height: 350px;
+        }
+        
+        .cr-step-overlay-text {
+            padding: 30px 20px;
+        }
+        
+        .cr-step-overlay-text h4 {
+            font-size: 20px;
+        }
+        
+        .cr-poster-list {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .cr-content-label {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cr-step-section {
+            padding: 40px 0;
+        }
+        
+        .cr-step-container {
+            padding: 0 15px;
+        }
+        
+        .cr-step-main-title {
+            font-size: 24px;
+        }
+        
+        .cr-step-desc {
+            font-size: 14px;
+        }
+        
+        .cr-step-poster {
+            height: 280px;
+            border-radius: 15px;
+        }
+        
+        .cr-step-overlay-text {
+            padding: 25px 15px;
+        }
+        
+        .cr-step-overlay-text h4 {
+            font-size: 18px;
+        }
+        
+        .cr-poster-list li {
+            font-size: 12px;
+        }
+        
+        .cr-content-label {
+            font-size: 16px;
+        }
+        
+        .cr-help-card {
+            padding: 20px 15px;
+        }
+        
+        .cr-card-body h5 {
+            font-size: 16px;
+        }
+        
+        .cr-card-body p {
+            font-size: 14px;
+        }
+        
+        .cr-step-focus-box {
+            padding: 15px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cr-step-main-title {
+            font-size: 22px;
+        }
+        
+        .cr-step-poster {
+            height: 250px;
+        }
+        
+        .cr-step-overlay-text h4 {
+            font-size: 16px;
+        }
+        
+        .cr-poster-list li {
+            font-size: 11px;
+        }
+        
+        .cr-help-card {
+            padding: 15px 12px;
+        }
+        
+        .cr-card-body h5 {
+            font-size: 15px;
+        }
+        
+        .cr-card-body p {
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 992px) {
+        .cr-step-grid {
+            grid-template-columns: 1fr;
         }
 
         .cr-step-poster {

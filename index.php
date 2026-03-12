@@ -1,4 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <?php include 'components/links.php'; ?>
+<style>
+/* Mobile First Fixes */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Force mobile layout */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .hero-content-grid,
+    .cr-step-grid,
+    .testimonial-grid,
+    .placement-grid {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .hero-form-container,
+    .cr-step-image-box,
+    .main-success-card,
+    .testimonial-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px !important;
+    }
+}
+</style>
+</head>
+<body>
 
 <style>
 /* Early Bird Scholarship Timer - Orange Theme Design */
@@ -52,10 +100,10 @@
     .timer-content {
         display: flex !important;
         align-items: center !important;
-        gap: 20px !important;
+        gap: 15px !important;
         overflow: hidden !important;
-        flex-direction: column !important;
-        white-space: nowrap !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
     }
 
     .timer-icon {
@@ -119,18 +167,22 @@
         overflow: hidden !important;
         min-width: 0 !important;
         text-align: center !important;
+        flex-wrap: wrap !important;
+        min-width: 200px !important;
     }
 
     .timer-title {
-        font-size: 14px !important;
+        font-size: 13px !important;
         font-weight: 800 !important;
         line-height: 1.3 !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
         color: #fff !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        letter-spacing: 0.5px !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        letter-spacing: 0.3px !important;
+        word-wrap: break-word !important;
+        flex-wrap: wrap !important;
     }
 
     .timer-date {
@@ -147,27 +199,28 @@
 
     .timer-countdown {
         display: flex !important;
-        gap: 8px !important;
+        gap: 6px !important;
         flex-shrink: 0 !important;
         overflow: hidden !important;
         flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
+        flex-wrap: wrap !important;
     }
 
     .countdown-value {
-        background: rgba(255, 255, 255, 0.3) !important;
+        background: rgba(255, 255, 255, 0.35) !important;
         color: #fff !important;
-        padding: 8px 10px !important;
-        border-radius: 12px !important;
-        font-size: 12px !important;
+        padding: 6px 8px !important;
+        border-radius: 10px !important;
+        font-size: 11px !important;
         font-weight: 800 !important;
-        min-width: 35px !important;
+        min-width: 32px !important;
         text-align: center !important;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
         backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
         transition: all 0.3s ease !important;
         animation: countdownPulse 1s infinite !important;
@@ -190,19 +243,18 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25) !important;
     }
 
-    /* Mobile responsive styles */
     @media (max-width: 768px) {
         .early-bird-timer {
             bottom: 15px;
             left: 15px;
             right: 15px;
-            max-width: none;
-            width: calc(100% - 30px);
+            max-width: 280px !important;
+            width: calc(100% - 30px) !important;
             padding: 18px 20px !important;
         }
         
         .timer-content {
-            gap: 15px !important;
+            gap: 12px !important;
         }
         
         .timer-icon {
@@ -218,10 +270,6 @@
             font-size: 13px !important;
         }
         
-        .timer-date {
-            font-size: 11px !important;
-        }
-        
         .countdown-value {
             font-size: 11px !important;
             padding: 6px 8px !important;
@@ -234,6 +282,8 @@
             bottom: 10px;
             left: 10px;
             right: 10px;
+            max-width: 240px !important;
+            width: calc(100% - 20px) !important;
             padding: 15px 18px !important;
         }
         
@@ -250,14 +300,78 @@
             font-size: 12px !important;
         }
         
-        .timer-date {
-            font-size: 10px !important;
-        }
-        
         .countdown-value {
             font-size: 10px !important;
             padding: 5px 7px !important;
             min-width: 28px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .early-bird-timer {
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
+            max-width: 200px !important;
+            width: calc(100% - 16px) !important;
+            padding: 12px 15px !important;
+        }
+        
+        .timer-content {
+            gap: 8px !important;
+        }
+        
+        .timer-icon {
+            width: 35px !important;
+            height: 35px !important;
+        }
+        
+        .timer-icon i {
+            font-size: 14px !important;
+        }
+        
+        .timer-title {
+            font-size: 11px !important;
+        }
+        
+        .countdown-value {
+            font-size: 9px !important;
+            padding: 4px 6px !important;
+            min-width: 25px !important;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .early-bird-timer {
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
+            max-width: 180px !important;
+            width: calc(100% - 10px) !important;
+            padding: 10px 12px !important;
+        }
+        
+        .timer-content {
+            gap: 6px !important;
+        }
+        
+        .timer-icon {
+            width: 30px !important;
+            height: 30px !important;
+        }
+        
+        .timer-icon i {
+            font-size: 12px !important;
+        }
+        
+        .timer-title {
+            font-size: 10px !important;
+        }
+        
+        .countdown-value {
+            font-size: 8px !important;
+            padding: 3px 5px !important;
+            min-width: 22px !important;
         }
     }
 </style>
@@ -313,14 +427,16 @@
     }
 </style>
 
+<?php include 'components/header.php'; ?>
 <?php include 'components/popup-form-new.php'; ?>
 <?php include 'components/herosection.php'; ?>
 <?php include 'components/work.php'; ?>
-<?php include 'components/signal.php'; ?>
-<?php include 'components/placement.php'; ?>
 <?php include 'components/cta.php'; ?>
-<?php include 'components/campus.php'; ?>
+<?php include 'components/signal.php'; ?>
+<?php include 'components/grid.php'; ?>
+<?php include 'components/placement.php'; ?>
 <?php include 'components/why_choose.php'; ?>
+<?php include 'components/campus.php'; ?>
 <?php include 'components/cta.php'; ?>
 <?php include 'components/about.php'; ?>
 <?php include 'components/testimunial.php'; ?>
@@ -328,7 +444,12 @@
 <?php include 'components/cta.php'; ?>
 <?php include 'components/scholarship-section.php'; ?>
 <?php include 'components/emotion_cta.php'; ?>
+<?php include 'components/student-reviews.php'; ?>
 <?php include 'components/faq.php'; ?>
+
+<!-- Footer Section -->
+<?php include 'components/footer.php'; ?>
+
 <script>
     // Page load hone par countdown start karein
     document.addEventListener('DOMContentLoaded', function() {
@@ -376,23 +497,11 @@
 
 <body>
 
-<!-- Early Bird Scholarship Timer - Fixed Bottom Left -->
-<div class="early-bird-timer">
-    <div class="timer-content">
-        <div class="timer-icon">
-            <i class="fas fa-bell"></i>
-        </div>
-        <div class="timer-text">
-            <span class="timer-title">Apply Before 30 June – Limited Seats Available</span>
-        </div>
-        <div class="timer-countdown" id="countdown">
-            <span class="countdown-value" id="days">3d</span>
-            <span class="countdown-value" id="hours">20h</span>
-            <span class="countdown-value" id="minutes">48m</span>
-            <span class="countdown-value" id="seconds">39s</span>
-        </div>
-    </div>
-</div>
+
+
+<?php include 'components/early-bird-timer.php'; ?>
+
+
 
 <!-- WhatsApp Fixed Button - Bottom Right -->
 <?php include 'site_identity.php'; ?>
@@ -400,4 +509,5 @@
     <i class="fab fa-whatsapp"></i>
 </a>
 
+</body>
 </html>
