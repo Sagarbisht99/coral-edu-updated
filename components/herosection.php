@@ -8,7 +8,7 @@
                     <span>Build Your Future as a Leader</span>
                 </h1>
                 <p class="hero-description">
-                    Get personalized guidance and find the right institute — even with an average percentile. 
+                    Get personalized guidance and find the right institute — even with an average percentile.
                     Our experts guide you to the industry's most prestigious programs.
                 </p>
                 <div class="hero-cta-group">
@@ -69,8 +69,8 @@
     .hero-layout {
         position: relative;
         min-height: 100vh;
-        background: linear-gradient(to right, rgba(10, 35, 91, 0.8) 0%, rgba(10, 35, 91, 0.2) 50%, rgba(10, 35, 91, 0.1) 100%), 
-                    var(--bg-dark) url("https://i.pinimg.com/1200x/57/ae/14/57ae1480cf6d9a5750bd0107c65befca.jpg") center/cover no-repeat;
+        background: linear-gradient(to right, rgba(10, 35, 91, 0.8) 0%, rgba(10, 35, 91, 0.2) 50%, rgba(10, 35, 91, 0.1) 100%),
+            var(--bg-dark) url("https://i.pinimg.com/1200x/57/ae/14/57ae1480cf6d9a5750bd0107c65befca.jpg") center/cover no-repeat;
         display: flex;
         align-items: center;
         padding: 120px 0 60px 0;
@@ -154,7 +154,7 @@
     }
 
     .cta-outline {
-        border: 1px solid rgba(255,255,255,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         color: white;
         padding: 16px 36px;
         border-radius: 8px;
@@ -164,7 +164,7 @@
     }
 
     .cta-outline:hover {
-        background: rgba(255,255,255,0.05);
+        background: rgba(255, 255, 255, 0.05);
         border-color: var(--primary-orange);
         color: var(--primary-orange);
     }
@@ -174,8 +174,8 @@
         background: var(--surface-dark);
         padding: 40px;
         border-radius: 24px;
-        border: 1px solid rgba(255,255,255,0.05);
-        box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     }
 
     .form-title {
@@ -186,20 +186,24 @@
         color: var(--white);
     }
 
-    .input-row { margin-bottom: 16px; }
+    .input-row {
+        margin-bottom: 16px;
+    }
+
     .input-row-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
         margin-bottom: 16px;
+        color: white;
     }
 
-    .hero-premium-form input, 
+    .hero-premium-form input,
     .hero-premium-form select {
         width: 100%;
         padding: 14px 18px;
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
         color: white;
         font-size: 15px;
@@ -208,14 +212,20 @@
     }
 
     #heroProgramSelect {
-        color: #000000;
+        color: white;
+        background-color: var(--surface-dark);
     }
 
-    .hero-premium-form input:focus, 
+    #heroProgramSelect option {
+        background-color: var(--surface-dark);
+        color: white;
+    }
+
+    .hero-premium-form input:focus,
     .hero-premium-form select:focus {
         outline: none;
         border-color: var(--primary-orange);
-        background: rgba(255,255,255,0.07);
+        background: rgba(255, 255, 255, 0.07);
     }
 
     .form-submit-btn {
@@ -251,9 +261,19 @@
             text-align: center;
             gap: 50px;
         }
-        .hero-description { margin: 0 auto 40px auto; }
-        .hero-cta-group { justify-content: center; }
-        .hero-premium-form { max-width: 500px; margin: 0 auto; }
+
+        .hero-description {
+            margin: 0 auto 40px auto;
+        }
+
+        .hero-cta-group {
+            justify-content: center;
+        }
+
+        .hero-premium-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
     }
 </style>
 
@@ -273,13 +293,13 @@
         ]
     };
 
-    document.getElementById('heroProgramSelect').addEventListener('change', function() {
+    document.getElementById('heroProgramSelect').addEventListener('change', function () {
         const specSelect = document.getElementById('heroSpecializationSelect');
         const selected = this.value;
-        
+
         specSelect.innerHTML = '<option value="">Select Specialization</option>';
-        
-        if(selected && specData[selected]) {
+
+        if (selected && specData[selected]) {
             specData[selected].forEach(item => {
                 let opt = document.createElement('option');
                 opt.value = item.v;
