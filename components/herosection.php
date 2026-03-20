@@ -221,6 +221,16 @@
         color: white;
     }
 
+    #heroSpecializationSelect {
+        color: white;
+        background-color: var(--surface-dark);
+    }
+
+    #heroSpecializationSelect option {
+        background-color: var(--surface-dark);
+        color: white;
+    }
+
     .hero-premium-form input:focus,
     .hero-premium-form select:focus {
         outline: none;
