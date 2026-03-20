@@ -204,6 +204,11 @@
         color: white;
         font-size: 15px;
         transition: 0.3s;
+
+    }
+
+    #heroProgramSelect {
+        color: #000000;
     }
 
     .hero-premium-form input:focus, 
